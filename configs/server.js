@@ -22,7 +22,7 @@ const configurarMiddlewares = (app) => {
 }
 
 const configurarRutas = (app) => {
-    const authPath = '/adoptionSystem}/v1/auth';
+    const authPath = '/adoptionSystem/v1/auth';
 
     app.use(authPath, authRoutes)
 }
