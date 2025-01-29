@@ -11,20 +11,19 @@ import  { dbConnection } from './mongo.js';
 
 import authRoutes from '../src/auth/auth.routes.js';
 
-const configurarMiddlewares = (app) => {
+const middlewares = (app) => {
     app.use(express.urlencoded({extended : false}));
-    app.use(cors());
     app.use(express.json());
+    app.use(cors());
     app.use(helmet());
     app.use(morgan('dev'));
     app.use(limiter);
 
 }
 
-const configurarRutas = (app) => {
-    const authPath = '/adoptionSystem/v1/auth';
+const routes = (app) => {
 
-    app.use(authPath, authRoutes)
+    app.use('/adoptionSystem/v1/auth', authRoutes)
 }
 
 const conectarDB = async () => {
@@ -40,6 +39,16 @@ const conectarDB = async () => {
 export const inicarServidor = async () => {
     const app = express();
     const port = process.env.PORT || 3000;
+
+    try{
+        middlewares(app);
+        conectarDB();
+        routes(app);
+        app.listen(port);
+        console.log(`Server running on port ${port}`);
+    }catch (err){
+        console.log(`server init failed: ${err}`);
+    }
 
     await conectarDB();
     configurarMiddlewares(app);
