@@ -15,7 +15,7 @@ export const dbConnection = async () => {
             console.log('MongoDB | connected to MongoDB');
         });
         mongoose.connection.on('open', ()=>{
-            console.log('MongoDB | connected to satabase');
+            console.log('MongoDB | connected to database');
         });
         mongoose.connection.on('reconected', ()=>{
             console.log('MongoDB | reconnected to MongoDB');

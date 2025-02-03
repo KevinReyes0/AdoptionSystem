@@ -1,12 +1,14 @@
-import { body } from 'expres-validator';
-import { validarCampos } from './validar-campos';
-import { existeEmail } from '../helpers/db.validator';
+import { body } from 'express-validator';
+import { validarCampos } from './validar-campos.js';
+import { existeEmail, esRoleValido } from '../helpers/db.validator.js';
 
-export const crearMascotaValidation = [
+
+export const registerValidator = [
     body('name', 'The name is required').not().isEmpty(),
     body('surname', 'The surname is rquired').not().isEmpty(),
     body('email', 'You must enter a valid email').isEmail(),
     body('email').custom(existeEmail),
+    body('role').custom(esRoleValido),
     body('password', 'password must be at least o characters').isLength({ min: 6}),
     validarCampos,
 ];

@@ -50,11 +50,4 @@ export const inicarServidor = async () => {
         console.log(`server init failed: ${err}`);
     }
 
-    await conectarDB();
-    configurarMiddlewares(app);
-    configurarRutas(app);
-
-    app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
-    });
 }
