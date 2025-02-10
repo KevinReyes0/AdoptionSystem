@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "803a98f2-96e1-4216-a158-03296e5586a4",
+		"name": "Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413968"
+	},
+	"item": [
+		{
+			"name": "MostrarPets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "agregarPets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarPets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
