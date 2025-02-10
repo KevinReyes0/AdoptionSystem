@@ -1,0 +1,120 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Users",
+    "collectionId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+    "dateExported": "2025-02-10T07:41:31.649Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4b7aa883-cf8c-4be2-872e-f56eb077c4c5",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "login",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-09T22:49:27.636Z",
+            "modified": "2025-02-10T06:42:41.652Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkxNjUwNDYsImV4cCI6MTczOTE2ODY0Nn0.mGMvCfcA4oE1p0PC9_KE79najoGmQ5ZWPVPh0LmgvT4"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"mreyes@kinal.edu\",\n  \"password\":\"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ca94e219-b882-45f2-a32a-5a31ee297fd6",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:3000/adoptionSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-09T22:49:50.919Z",
+            "modified": "2025-02-10T07:33:14.645Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Pepe\",\n  \"surname\":\"Torres\",\n  \"username\":\"PepTop\",\n  \"email\":\"ptorres@kinal.edu\",\n  \"password\":\"12345678\",\n  \"profilePicture\":\"\",\n  \"phone\":\"12345678\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bfbb8499-0189-4701-902a-4839c725130e",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "getUsers",
+            "url": "http://localhost:3000/adoptionSystem/v1/users?limite=10&desde=0",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-02-10T01:32:03.983Z",
+            "modified": "2025-02-10T01:34:27.904Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limite",
+                    "value": "10",
+                    "isPath": false
+                },
+                {
+                    "name": "desde",
+                    "value": "0",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "25e15d2e-1ce4-4fbf-a9a0-31adc25f4bb4",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "getUserById",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/findeUser/67a93e9a5f6252aaad780528",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-02-10T03:05:43.473Z",
+            "modified": "2025-02-10T03:07:26.290Z",
+            "headers": []
+        },
+        {
+            "_id": "8f35ef12-7ca5-4494-aaa0-693944841e85",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "updateUser",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67a93e9a5f6252aaad780528",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2025-02-10T03:25:27.862Z",
+            "modified": "2025-02-10T03:27:44.269Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Manuel\",\n  \"surname\":\"Reyes\",\n  \"username\":\"ManRey\",\n  \"email\":\"ManRey@kinal.edu\",\n  \"password\":\"123456789\",\n  \"profilePicture\":\"\",\n  \"phone\":\"12345678\",\n  \"role\": \"USER_ROLE\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4a95962a-eb12-4ecd-8124-a38dbf01a745",
+            "colId": "f2796dc4-60a4-4241-9023-1127094b5fd7",
+            "containerId": "",
+            "name": "deleteUser",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/67a9abbaf7b9d711153262ee",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2025-02-10T03:45:05.048Z",
+            "modified": "2025-02-10T07:36:09.637Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkxNzI5NDAsImV4cCI6MTczOTE3NjU0MH0.Wu-TpcC1SDXgm9TolgC4DkMI6eup2Nt_Sghj8yd572c"
+                }
+            ]
+        }
+    ],
+    "ref": "_PG0tjOG1wVWgRJHYjIjMcDCddNJ4_6MUdAiqflZCP8t_uVIOW_sm8odqs3yza-AJPfj9RmJVquHRwrLBBHKCw"
+}

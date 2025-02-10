@@ -1,0 +1,79 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "pets",
+    "collectionId": "c0c85f66-2ace-4c8a-bd84-4ce485bd7511",
+    "dateExported": "2025-02-10T07:41:54.190Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "39452f61-ff0f-4638-a5a3-7177d8f67456",
+            "colId": "c0c85f66-2ace-4c8a-bd84-4ce485bd7511",
+            "containerId": "",
+            "name": "savePets",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-10T05:18:14.097Z",
+            "modified": "2025-02-10T07:14:05.483Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkxNzE2MzMsImV4cCI6MTczOTE3NTIzM30.chkmJCSWFhhz5xuqx9z38ut5heZRwEdfLLfXjxQKxzw"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Brau\",\n  \"description\": \"perro-salchica\",\n  \"age\": \"5\",\n  \"type\": \"Perro\",\n  \"email\": \"kreyes@kinal.edu\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "76796ab9-e6aa-4aca-adf8-d7ce9085637a",
+            "colId": "c0c85f66-2ace-4c8a-bd84-4ce485bd7511",
+            "containerId": "",
+            "name": "getPets",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-02-10T06:00:29.297Z",
+            "modified": "2025-02-10T06:00:39.703Z",
+            "headers": []
+        },
+        {
+            "_id": "0f2c765a-57df-4af8-9652-d073e337b6e7",
+            "colId": "c0c85f66-2ace-4c8a-bd84-4ce485bd7511",
+            "containerId": "",
+            "name": "searchPet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67a98dff84ff920fa2de63c8",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-02-10T06:39:53.577Z",
+            "modified": "2025-02-10T06:42:57.824Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkxNjk3NjEsImV4cCI6MTczOTE3MzM2MX0.0wCrynTlHcj2W_sA4PVKwk1-25xTydSFgZNImhbZpHE"
+                }
+            ]
+        },
+        {
+            "_id": "7865c97d-6c1b-4593-b45f-10f9bfdd21e4",
+            "colId": "c0c85f66-2ace-4c8a-bd84-4ce485bd7511",
+            "containerId": "",
+            "name": "deletePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67a9a73d9ab7e815052b485f",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-02-10T07:11:25.571Z",
+            "modified": "2025-02-10T07:15:17.837Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkxNzE2MzMsImV4cCI6MTczOTE3NTIzM30.chkmJCSWFhhz5xuqx9z38ut5heZRwEdfLLfXjxQKxzw"
+                }
+            ]
+        }
+    ],
+    "ref": "A1mQJvXcntDLHReISRatrKRd8Wjb5U9DdC2uilj895N5_wvD_I9KkOw5y6HVbGpvMosQ4s27S712Hmp3ChRUlw"
+}

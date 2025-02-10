@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "67a98dff84ff920fa2de63c8"
+  },
+  "name": "bruno",
+  "description": "PASTOR aleman",
+  "age": 4,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a97d14334456e579f99d25"
+  },
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67a9a73d9ab7e815052b485f"
+  },
+  "name": "Brau",
+  "description": "perro-salchica",
+  "age": 5,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a97d14334456e579f99d25"
+  },
+  "status": false
+}]

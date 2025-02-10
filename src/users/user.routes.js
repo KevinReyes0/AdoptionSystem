@@ -4,6 +4,8 @@ import {getUsers, getUserById, updateUser, deleteUser} from './user.controller.j
 import {existeUsuarioById} from '../helpers/db.validator.js';
 import {validarCampos} from '../moddlewares/validar-campos.js';
 import { uploadProfilePicture } from "../moddlewares/multer-upload.js";
+import { tieneRole } from "../moddlewares/validar-roles.js";
+import { validarJWT } from "../moddlewares/validar-jwt.js";
 
 const router = Router();
 
@@ -33,6 +35,8 @@ router.put(
 router.delete(
     "/:id",
     [
+        validarJWT,
+        tieneRole("ADMIN_ROLE, VENTAS_ROLE"),
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
