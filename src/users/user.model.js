@@ -25,7 +25,7 @@ const UserSchema = Schema({
         required: [true, 'Password is required'],
         minLength: 8
     },
-    propilePicture: {
+    profilePicture: {
         type: String
     },
     phone: {

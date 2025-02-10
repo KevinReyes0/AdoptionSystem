@@ -1,6 +1,6 @@
 import multer from 'multer';
 import {dirname, extname, join} from "path";
-import  {fileURLToPath} from "url";
+import {fileURLToPath} from "url";
 
 const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
 const MYMETYPES = ["image/jpeg", "image/png", "image/jpg"]; 
@@ -16,8 +16,8 @@ const createMulterConfig = (destinationPath) =>{
             },
             filename: (req, file, cb) => {
                 const fileExtension = extname (file.originalname);
-                const fileName = file.originalname.spliy(fileExtension)[0];
-                cb(null, `${filename}-${Date.now()}${fileExtension}`);
+                const fileName = file.originalname.split(fileExtension)[0];
+                cb(null, `${fileName}-${Date.now()}${fileExtension}`);
             } 
         }),
         fileFilter:(req, file, cb) => {
@@ -32,6 +32,6 @@ const createMulterConfig = (destinationPath) =>{
     })
 }
 
-export const uploadProfilePicture = createMulterConfig("../public/uploads/profile-picture");
+export const uploadProfilePicture = createMulterConfig("../public/uploads/profile-pictures");
 export const uploadPetPicture = createMulterConfig("../public/uploads/pet-pictures");
 

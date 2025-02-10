@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import {join} from 'path'
 
-export const deleteFileOnError = async (error, removeEventListener, resizeBy, next) => {
+export const deleteFileOnError = async (err, req, res, next) => {
     if(req.file && req.filePath){
         const filePath = join (req.filePath, req.file.fileame);
         try{
@@ -12,7 +12,7 @@ export const deleteFileOnError = async (error, removeEventListener, resizeBy, ne
         }
 
 
-    }if(error.status === 400 || err.errors){
+    }if(err.status === 400 || err.errors){
         return res.status(400).json({
             success: false,
             error: err.errors

@@ -7,13 +7,9 @@ export const  login = async(req, res) => {
 
     try {
 
-        const lowerEmail = email ? email.toLowerCase() : null;
-        const lowerUsernamen = username ? username.toLowerCase() : null;
-
-        const user = await Usuario.finOne({
-            $or: [{email: lowerEmail}, {username: lowerUsernamen}]
-        })
-        const usuario = await Usuario.findOne({ correo });
+        const user = await Usuario.findOne({
+            $or: [{email}, {username}]
+        }) 
 
         if(!user){
             return res.status(400).json({
