@@ -23,4 +23,30 @@
     "$oid": "67a97d14334456e579f99d25"
   },
   "status": false
+},
+{
+  "_id": {
+    "$oid": "67aa862c463caef20034701f"
+  },
+  "name": "Nieve",
+  "description": "French",
+  "age": 9,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67aa7b3749eae783d0a1d4c5"
+  },
+  "status": false
+},
+{
+  "_id": {
+    "$oid": "67abb8a3e95ad0e4d4d73ba2"
+  },
+  "name": "Brau",
+  "description": "Chihuahua",
+  "age": 9,
+  "type": "LORO",
+  "keeper": {
+    "$oid": "67aa7b3749eae783d0a1d4c5"
+  },
+  "status": true
 }]

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "803a98f2-96e1-4216-a158-03296e5586a4",
+		"_postman_id": "c4b156b2-78a0-437d-9853-15c869556c41",
 		"name": "Pets",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37413968"
@@ -10,15 +10,58 @@
 			"name": "MostrarPets",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "agregarPets",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhN2IzNzQ5ZWFlNzgzZDBhMWQ0YzUiLCJpYXQiOjE3MzkzMDcxMzMsImV4cCI6MTczOTMxMDczM30.NuLIcQCiUv4R2QplAE8Bnf-tY5hfNWagOcHGi1lOtdk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"cola\",\r\n    \"description\": \"Pittbull\",\r\n    \"age\": 7,\r\n    \"type\": \"PERRO\",\r\n    \"email\": \"jperalta@kinal.edu.gt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -26,7 +69,10 @@
 			"name": "BuscarPets",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		},
@@ -34,7 +80,47 @@
 			"name": "EliminarPets",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarPet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkzMTQxNjMsImV4cCI6MTczOTMxNzc2M30.f8xZc8u8CIOTwJV5fhwBAz2-uHSIzoBB3MFbbDpDDDM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Brau\",\r\n    \"description\": \"Chihuahua\",\r\n    \"age\": 9,\r\n    \"type\": \"Loro\",\r\n    \"email\": \"mreyes@kinal.edu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67abb8a3e95ad0e4d4d73ba2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67abb8a3e95ad0e4d4d73ba2"
+					]
+				}
 			},
 			"response": []
 		}

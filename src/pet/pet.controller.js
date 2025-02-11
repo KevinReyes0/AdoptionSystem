@@ -1,4 +1,3 @@
-import req from 'express/lib/request.js';
 import User from '../users/user.model.js'
 import Pet from './pet.model.js' 
 
@@ -6,6 +5,7 @@ export const savePet = async (req, res) => {
     try {
         
         const data = req.body;
+
         const user = await User.findOne({email: data.email});
 
         if(!user){
@@ -121,4 +121,26 @@ export const deletePet = async (req, res) => {
         })
     }
 
+}
+
+export const updatePet = async (req, res  = response) => {
+    try {
+        const {id} = req.params;
+        const {_id, ...data} = req.body;
+
+        const pet = await Pet.findByIdAndUpdate(id, data, {new: true});
+
+        res.status(200).json({
+            succes: true,
+            msj: 'Pet actualizado con exito',
+            pet
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            succes: false,
+            msj: "Error al actualizar Pet",
+            error
+        })
+    }
 }

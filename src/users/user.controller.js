@@ -16,8 +16,7 @@ export const getUsers = async (req = request, res = response) => {
 
         res.status(200).json({
             succes: true,
-            total, 
-            users
+            total
         })
 
     } catch (error) {
@@ -59,11 +58,11 @@ export const updateUser = async (req, res  = response) => {
     try {
         const {id} = req.params;
         const {_id, password, email, ...data} = req.body;
-
+/*
         if(password){
             data.password = await hash(password)
         }
-
+*/
         const user = await User.findByIdAndUpdate(id, data, {new: true});
 
         res.status(200).json({
@@ -75,6 +74,31 @@ export const updateUser = async (req, res  = response) => {
         res.status(500).json({
             succes: false,
             msj: "Error al actualizar user",
+            error
+        })
+    }
+}
+
+export const updatePassword = async (req, res = response) => {
+    try {
+        const {id} = req.params;
+        const {password} = req.body;
+
+        if(password){
+            const passwordUpdate = await hash(password)
+
+            await User.findByIdAndUpdate(id, { password: passwordUpdate });
+        };
+
+        res.status(200).json({
+            succes: true,
+            msj: 'Contraseña actualizado con exito',
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            succes: true,
+            msj: 'No se pudo actualizar la contraseña',
             error
         })
     }

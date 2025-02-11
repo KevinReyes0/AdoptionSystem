@@ -10,23 +10,83 @@
 			"name": "MostarUsers",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Login",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"mreyes@kinal.edu\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Register",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jorge\",\r\n    \"surname\": \"Peralta\",\r\n    \"username\": \"jperalta\",\r\n    \"email\": \"jperalta@kinal.edu.gt\",\r\n    \"password\": \"12345678\",\r\n    \"profilePicture\": \" \",\r\n    \"phone\": \"12345678\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
 			},
 			"response": []
 		},
@@ -34,15 +94,58 @@
 			"name": "EliminarUser",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/67a9abbaf7b9d711153262ee?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhN2IzNzQ5ZWFlNzgzZDBhMWQ0YzUiLCJpYXQiOjE3MzkyMjY4MzMsImV4cCI6MTczOTIzMDQzM30.uauw79D3FG2DudZfthgfe-gXzligwME3FhDpZv8hUwA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						"67a9abbaf7b9d711153262ee"
+					],
+					"query": [
+						{
+							"key": "x-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhN2IzNzQ5ZWFlNzgzZDBhMWQ0YzUiLCJpYXQiOjE3MzkyMjY4MzMsImV4cCI6MTczOTIzMDQzM30.uauw79D3FG2DudZfthgfe-gXzligwME3FhDpZv8hUwA"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "ActualizarUser",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jorge\",\r\n    \"surname\": \"Peralta\",\r\n    \"username\": \"jperalta\",\r\n    \"email\": \"jperalta@kinal.edu.gt\",\r\n    \"password\": \"11111111\",\r\n    \"profilePicture\": \" \",\r\n    \"phone\": \"12345678\",\r\n    \"role\": \"USER_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/67aa7b3749eae783d0a1d4c5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						"67aa7b3749eae783d0a1d4c5"
+					]
+				}
 			},
 			"response": []
 		},
@@ -50,7 +153,54 @@
 			"name": "BuscarUser",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/findeUser/67a97eab4694f4c450deae7c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						"findeUser",
+						"67a97eab4694f4c450deae7c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarContra",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/passwordUpdate/67a97eab4694f4c450deae7c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"users",
+						"passwordUpdate",
+						"67a97eab4694f4c450deae7c"
+					]
+				}
 			},
 			"response": []
 		}
