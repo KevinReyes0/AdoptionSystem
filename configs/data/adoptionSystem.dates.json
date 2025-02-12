@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "67abfe5ac250cdf33fabd62d"
+  },
+  "hora": "01:00",
+  "fecha": "12/12/2025",
+  "motivo": "mi perro esta malo",
+  "keeper": {
+    "$oid": "67a97eab4694f4c450deae7c"
+  },
+  "status": true
+}]

@@ -93,10 +93,16 @@
 		{
 			"name": "EliminarUser",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkzMzg4MTYsImV4cCI6MTczOTM0MjQxNn0.s5cqE-ZrMkszhgNGKH15TuY54sKm4hPlc2rIWuFSFzY",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://localhost:3000/adoptionSystem/v1/users/67a9abbaf7b9d711153262ee?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhN2IzNzQ5ZWFlNzgzZDBhMWQ0YzUiLCJpYXQiOjE3MzkyMjY4MzMsImV4cCI6MTczOTIzMDQzM30.uauw79D3FG2DudZfthgfe-gXzligwME3FhDpZv8hUwA",
+					"raw": "http://localhost:3000/adoptionSystem/v1/users/67aa7b3749eae783d0a1d4c5",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -106,13 +112,7 @@
 						"adoptionSystem",
 						"v1",
 						"users",
-						"67a9abbaf7b9d711153262ee"
-					],
-					"query": [
-						{
-							"key": "x-token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhN2IzNzQ5ZWFlNzgzZDBhMWQ0YzUiLCJpYXQiOjE3MzkyMjY4MzMsImV4cCI6MTczOTIzMDQzM30.uauw79D3FG2DudZfthgfe-gXzligwME3FhDpZv8hUwA"
-						}
+						"67aa7b3749eae783d0a1d4c5"
 					]
 				}
 			},

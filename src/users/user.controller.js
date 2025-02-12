@@ -16,7 +16,8 @@ export const getUsers = async (req = request, res = response) => {
 
         res.status(200).json({
             succes: true,
-            total
+            total,
+            users
         })
 
     } catch (error) {

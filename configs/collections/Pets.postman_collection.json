@@ -8,9 +8,21 @@
 	"item": [
 		{
 			"name": "MostrarPets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
 					"protocol": "http",
@@ -69,9 +81,32 @@
 			"name": "BuscarPets",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkzMzg4MTYsImV4cCI6MTczOTM0MjQxNn0.s5cqE-ZrMkszhgNGKH15TuY54sKm4hPlc2rIWuFSFzY",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67a98dff84ff920fa2de63c8?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67a98dff84ff920fa2de63c8"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
 				}
 			},
 			"response": []
@@ -79,10 +114,27 @@
 		{
 			"name": "EliminarPets",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkzMzg4MTYsImV4cCI6MTczOTM0MjQxNn0.s5cqE-ZrMkszhgNGKH15TuY54sKm4hPlc2rIWuFSFzY",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": ""
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67abb8a3e95ad0e4d4d73ba2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67abb8a3e95ad0e4d4d73ba2"
+					]
 				}
 			},
 			"response": []

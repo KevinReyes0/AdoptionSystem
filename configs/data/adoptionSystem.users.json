@@ -10,7 +10,7 @@
   "profilePicture": null,
   "phone": "12345678",
   "role": "ADMIN_ROLE",
-  "estado": false,
+  "estado": true,
   "createdAt": {
     "$date": "2025-02-10T04:14:12.215Z"
   },
@@ -26,7 +26,7 @@
   "surname": "Reyes",
   "username": "maRey",
   "email": "mreyes@kinal.edu",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$cU87FHw0/kMkUDMpJhRUug$3wYieIHTGba+WRxoPANM2eUZUEWHQ+2mWgYlOiMb1lg",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$kTK6eNRsw9otgQp4l1gwGA$HyMvJ3ohWUNsOf80J2CVPNcX/RRZoIft8/j7/ftQGpI",
   "profilePicture": null,
   "phone": "12345678",
   "role": "ADMIN_ROLE",
@@ -35,7 +35,7 @@
     "$date": "2025-02-10T04:20:59.351Z"
   },
   "updatedAt": {
-    "$date": "2025-02-11T22:49:13.331Z"
+    "$date": "2025-02-10T04:20:59.351Z"
   }
 },
 {
@@ -50,12 +50,12 @@
   "profilePicture": null,
   "phone": "12345678",
   "role": "USER_ROLE",
-  "estado": false,
+  "estado": true,
   "createdAt": {
     "$date": "2025-02-10T07:33:14.632Z"
   },
   "updatedAt": {
-    "$date": "2025-02-10T22:35:29.038Z"
+    "$date": "2025-02-10T07:33:14.632Z"
   }
 },
 {
@@ -70,11 +70,11 @@
   "profilePicture": " ",
   "phone": "12345678",
   "role": "USER_ROLE",
-  "estado": true,
+  "estado": false,
   "createdAt": {
     "$date": "2025-02-10T22:18:31.265Z"
   },
   "updatedAt": {
-    "$date": "2025-02-11T22:33:50.534Z"
+    "$date": "2025-02-12T05:46:15.275Z"
   }
 }]

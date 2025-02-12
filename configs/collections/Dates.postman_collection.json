@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "24cd908c-6d31-4e8f-87b3-fd479f8fceda",
+		"name": "Dates",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413968"
+	},
+	"item": [
+		{
+			"name": "AgregarDates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E5N2VhYjQ2OTRmNGM0NTBkZWFlN2MiLCJpYXQiOjE3MzkzMjQ3NzYsImV4cCI6MTczOTMyODM3Nn0.LLNv4pBZ9kbymCvEUlar_VVT2iBY_o6DjrsBfOjmOHs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hora\": \"01:00\",\r\n    \"fecha\": \"12/12/2025\",\r\n    \"motivo\": \"mi perro esta malo\",\r\n    \"email\": \"mreyes@kinal.edu\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/dates/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"dates",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostrarCitas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/dates/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"dates",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
