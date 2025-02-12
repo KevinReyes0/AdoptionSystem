@@ -6,7 +6,7 @@ const DateSchema = Schema ({
         required: true
     },
     fecha: {
-        type: Boolean,
+        type: String,
         required: true
     },
     motivo: {
